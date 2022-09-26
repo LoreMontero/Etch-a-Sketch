@@ -1,8 +1,42 @@
+* {
+    color: white;
+}
+
+body {
+    background-color: rgba(36, 36, 35, 0.7);
+}
+
 h1 {
     display: flex;
     justify-content: center;
 }
 
+.dashboard {
+    display: flex;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(41, 41, 42);
+    border-radius: 25px;
+}
+
+button {
+    background-color:black;
+    padding: 15px;
+    border-radius: 25px;
+    border: none;
+    margin: 20px;
+    transition: 3ms;
+}
+
+button:hover {
+    background-color: rgb(74, 235, 136);
+    font-size: 105%;
+}
+
 .container {
     display: grid;
+    
 }
