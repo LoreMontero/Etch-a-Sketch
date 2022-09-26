@@ -1,5 +1,5 @@
 * {
-    color: white;
+    color: white; 
 }
 
 body {
@@ -13,30 +13,38 @@ h1 {
 
 .dashboard {
     display: flex;
+    gap: 70px;
+    background-color:rgb(47, 48, 48);
+    padding: 20px;
+    border-radius: 25px;
 }
 
 .buttons {
     display: flex;
     flex-direction: column;
-    background-color: rgb(41, 41, 42);
+    background-color: rgb(29, 29, 30);
     border-radius: 25px;
+    width:fit-content;
 }
 
-button {
-    background-color:black;
+button, input {
+    background-color: rgba(88, 88, 87, 0.7);
     padding: 15px;
     border-radius: 25px;
     border: none;
-    margin: 20px;
-    transition: 3ms;
+    margin: 10px;
+    transition: 0.1s;
 }
 
 button:hover {
-    background-color: rgb(74, 235, 136);
-    font-size: 105%;
+    background-color: rgb(8, 116, 238);
+    transform: scale(1.15);
 }
 
 .container {
     display: grid;
-    
+    background-color: white;
+    height: 420px;
+    width: 420px;
+    border-color:rgba(0, 0, 0, 0.975);
 }
