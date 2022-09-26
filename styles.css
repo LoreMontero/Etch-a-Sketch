@@ -43,7 +43,7 @@ button:hover {
     transform: scale(1.15);
 }
 
-.container {
+.sketchPad {
     display: grid;
     background-color: white;
     height: 420px;

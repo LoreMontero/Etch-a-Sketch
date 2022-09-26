@@ -1,1 +1,3 @@
-const container = document.querySelector('.container')
+const sketchPad = document.querySelector('.sketchPad')
+
+
