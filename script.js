@@ -2,9 +2,9 @@ const slider = document.querySelector('#slider');
 const clear = document.querySelector('#clear');
 const eraser = document.querySelector('#eraser');
 const rainbow = document.querySelector('#rainbow');
+const sketchPad = document.querySelector('.sketchPad');
 
 const createDivs = (size) => {
-    const sketchPad = document.querySelector('.sketchPad');
     sketchPad.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     sketchPad.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 
@@ -17,3 +17,4 @@ const createDivs = (size) => {
 }
 
 createDivs(20);
+
