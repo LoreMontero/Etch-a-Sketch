@@ -1,5 +1,7 @@
 const slider = document.querySelector('#slider');
-
+const clear = document.querySelector('#clear');
+const eraser = document.querySelector('#eraser');
+const rainbow = document.querySelector('#rainbow');
 
 const createDivs = (size) => {
     const sketchPad = document.querySelector('.sketchPad');
@@ -8,7 +10,7 @@ const createDivs = (size) => {
 
     for(let i = 0; i < 4096; i++) {
         let square = document.createElement('div');
-        square.classList.add('painting')
+        square.classList.add('painting');
         square.style.backgroundColor = "white";
         sketchPad.insertAdjacentElement("beforeend", square);
     }
