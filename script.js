@@ -3,14 +3,14 @@ const clear = document.querySelector('#clear');
 const eraser = document.querySelector('#eraser');
 const rainbow = document.querySelector('#rainbow');
 const sketchPad = document.querySelector('.sketchPad');
-const square = document.createElement('div');
+const colorMode = document.querySelector('#colorChoice')
 
 const createDivs = (size) => {
     sketchPad.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     sketchPad.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 
     for(let i = 0; i < 4096; i++) {
-        
+        let square = document.createElement('div');
         square.classList.add('painting');
         square.style.backgroundColor = "white";
         sketchPad.insertAdjacentElement("beforeend", square);
@@ -19,6 +19,10 @@ const createDivs = (size) => {
 
 createDivs(20);
 
+colorMode.addEventListenr('click', (e) => {
+    colorMode.style.backgroundColor = 
+})
+
 sketchPad.addEventListener('click', (e) => {
-    square.style.backgroundColor = "black"
+    
 })
