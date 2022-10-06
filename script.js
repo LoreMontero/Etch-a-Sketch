@@ -19,8 +19,8 @@ const createDivs = (size) => {
 
 createDivs(20);
 
-colorMode.addEventListenr('click', (e) => {
-    colorMode.style.backgroundColor = 
+colorMode.addEventListener('click', (e) => {
+    colorMode.style.backgroundColor = "rgb(8, 116, 238)"
 })
 
 sketchPad.addEventListener('click', (e) => {
