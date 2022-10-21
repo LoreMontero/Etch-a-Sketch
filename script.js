@@ -5,7 +5,7 @@ const rainbow = document.querySelector('#rainbow');
 const sketchPad = document.querySelector('.sketchPad');
 const colorMode = document.querySelector('#colorChoice');
 const modes = document.querySelectorAll('.mode');
-const canvas = document.querySelector('.painting')
+const canvas = document.querySelector('.painting');
 
 const createDivs = (size) => {
     sketchPad.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
@@ -17,7 +17,7 @@ const createDivs = (size) => {
         sketchPad.insertAdjacentElement("beforeend", square);
     }
 }
-createDivs(20);
+createDivs(window.prompt("Choose your square size?"));
 
 modes.forEach(item => {
     item.addEventListener('click', event => {
@@ -33,6 +33,6 @@ painting.forEach(item => {
 });
 
 clear.addEventListener('click', event => {
-    sketchPad.style.backgroundColor = 'white'
+    sketchPad.style.backgroundColor = 'blue'
 });
 
