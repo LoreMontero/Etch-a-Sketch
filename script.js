@@ -1,9 +1,9 @@
-const slider = document.querySelector('#slider');
+// const slider = document.querySelector('#slider');
 const clear = document.querySelector('#clear');
 const eraser = document.querySelector('#eraser');
 const rainbow = document.querySelector('#rainbow');
 const sketchPad = document.querySelector('.sketchPad');
-const colorMode = document.querySelector('#colorChoice');
+// const colorMode = document.querySelector('#colorChoice');
 const modes = document.querySelectorAll('.mode');
 const canvas = document.querySelector('.painting');
 let paintColor = "black";
@@ -22,7 +22,7 @@ createDivs(20);
 
 modes.forEach(item => {
     item.addEventListener('click', event => {
-        item.style.backgroundColor = 'rgb(0, 255, 68)';
+        item.style.backgroundColor = 'rgb(76, 225, 68)';
     });
 });
 
@@ -39,5 +39,8 @@ clear.addEventListener('click', event => {
 
 eraser.addEventListener('click', event => {
     paintColor = "white";
-})
+});
 
+rainbow.addEventListener('click', event => {
+    
+});
