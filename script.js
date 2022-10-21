@@ -17,22 +17,22 @@ const createDivs = (size) => {
         sketchPad.insertAdjacentElement("beforeend", square);
     }
 }
-createDivs(window.prompt("Choose your square size?"));
+createDivs(20);
 
 modes.forEach(item => {
     item.addEventListener('click', event => {
-        item.style.backgroundColor = 'rgb(8, 116, 238)'
+        item.style.backgroundColor = 'rgb(0, 255, 68)';
     });
 });
 
 const painting = document.querySelectorAll('.painting');
 painting.forEach(item => {
     item.addEventListener('mouseover', event => {
-        item.style.backgroundColor = 'black'
+        item.style.backgroundColor = 'black';
     });
 });
 
 clear.addEventListener('click', event => {
-    sketchPad.style.backgroundColor = 'blue'
+    sketchPad.style.backgroundColor = 'blue';
 });
 
