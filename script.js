@@ -3,10 +3,9 @@ const clear = document.querySelector('#clear');
 const eraser = document.querySelector('#eraser');
 const rainbow = document.querySelector('#rainbow');
 const sketchPad = document.querySelector('.sketchPad');
-// const colorMode = document.querySelector('#colorChoice');
+const colorMode = document.querySelector('#colorChoice');
 const modes = document.querySelectorAll('.mode');
 const canvas = document.querySelector('.painting');
-let paintColor = "black";
 
 const createDivs = (size) => {
     sketchPad.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
@@ -30,9 +29,12 @@ modes.forEach(item => {
 });
 
 const painting = document.querySelectorAll('.painting');
-painting.forEach(item => {
-    item.addEventListener('mouseover', event => {
-        item.style.backgroundColor = `${paintColor}`;
+
+colorMode.addEventListener('click', event => {
+    painting.forEach(item => {
+        item.addEventListener('mouseover', event => {
+            item.style.backgroundColor = "black";
+        });
     });
 });
 
@@ -45,8 +47,7 @@ clear.addEventListener('click', event => {
 eraser.addEventListener('click', event => {
     painting.forEach(item => {
         item.addEventListener('mouseover', event => {
-            paintColor = "white";
-            item.style.backgroundColor = `${paintColor}`;
+            item.style.backgroundColor = "white";
         });
     });
 });
@@ -54,8 +55,7 @@ eraser.addEventListener('click', event => {
 rainbow.addEventListener('click', event => {
     painting.forEach(item => {
         item.addEventListener('mouseover', event => {
-            paintColor = randomColor();
-            item.style.backgroundColor = `${paintColor}`;
+            item.style.backgroundColor = `${randomColor()}`;
         });
     });
 });
