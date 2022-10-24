@@ -37,13 +37,25 @@ painting.forEach(item => {
 });
 
 clear.addEventListener('click', event => {
-    sketchPad.style.backgroundColor = 'blue';
+    painting.forEach(item => {
+        item.style.backgroundColor = "white"; 
+    });
 });
 
 eraser.addEventListener('click', event => {
-    paintColor = "white";
+    painting.forEach(item => {
+        item.addEventListener('mouseover', event => {
+            paintColor = "white";
+            item.style.backgroundColor = `${paintColor}`;
+        });
+    });
 });
 
 rainbow.addEventListener('click', event => {
-    paintColor = randomColor();
+    painting.forEach(item => {
+        item.addEventListener('mouseover', event => {
+            paintColor = randomColor();
+            item.style.backgroundColor = `${paintColor}`;
+        });
+    });
 });
