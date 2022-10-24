@@ -20,9 +20,12 @@ const createDivs = (size) => {
 }
 createDivs(20);
 
+const randomNumber = () => Math.floor(Math.random() * 256);
+const randomColor = () => `rgb(${randomNumber()}, ${randomNumber()}, ${randomNumber()})`
+
 modes.forEach(item => {
     item.addEventListener('click', event => {
-        item.style.backgroundColor = 'rgb(76, 225, 68)';
+        item.style.backgroundColor = 'rgb(8, 116, 238)';
     });
 });
 
@@ -42,5 +45,5 @@ eraser.addEventListener('click', event => {
 });
 
 rainbow.addEventListener('click', event => {
-    
+    paintColor = randomColor();
 });
