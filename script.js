@@ -17,7 +17,7 @@ const createDivs = (size) => {
         sketchPad.insertAdjacentElement('beforeend', square);
     }
 }
-createDivs(64);
+createDivs(20);
 
 const randomNumber = () => Math.floor(Math.random() * 256);
 const randomColor = () => `rgb(${randomNumber()}, ${randomNumber()}, ${randomNumber()})`
